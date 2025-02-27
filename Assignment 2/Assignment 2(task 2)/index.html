@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>User Registration Form</h1>
+        </header>
+
+        <main>
+            <form>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Full Name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password" required>
+                <div id="strengthIndicator" style="height: 10px; width: 100%; background-color: lightgray; margin-bottom: 1rem; display: none;"></div>
+
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                <span id="passwordError" style="color: red; display: none;">Passwords do not match</span>
+
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob">
+
+                <div class="gender">
+                <p>Gender</p>
+                <input type="radio" name="gender" id="male" value="male" checked>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">Female</label>
+                </div>
+
+                <label for="pic">Upload Profile Picture</label>
+                <input type="file" accept="image/*" id="pic">
+                <img id="imagePreview" style="max-width: 100px; display: none;">
+                
+                <div class="tc">
+                <input type="checkbox" id="tc" required>
+                <label for="tc">I agree to the Terms and Conditions</label>
+                </div>
+
+                <button type="submit" id="submitBtn" disabled>Submit</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
